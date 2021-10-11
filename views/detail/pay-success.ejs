@@ -1,0 +1,24 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/nav-min') %> 
+<div style="background-color: #ffd27f; height: 100vh; align-content: center;">
+    <div class="alert alert-success" role="alert">
+        Your Payments Success!
+    </div>
+    <h1 class="font-weight-bold text-center">Thank You For Buying in Our Shop</h1>
+    <div class="d-flex justify-content-center">
+        <div class="card" style="width: 22rem; margin-top: 10px; border-radius: 15px;">
+            <img class="card-img-top" src="images/thank_you.jpg">
+            <div class="card-body">
+                <h5 class="card-title text-center">You've Bought</h5>
+                <h6 class="font-weight-bold">items:</h6>
+                <p class="card-text"><%= listName %> </p>
+                <h6 class="font-weight-bold">total price</h6>
+                <p class="card-text">Rp. <%= itemsPrice %> </p>
+                <div class="d-flex justify-content-center">
+                    <a href="/" class="btn btn-primary">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer') %> 

@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.carousel{
+    margin-top: 70px;
+}
+.avatar-img{
+    width: 53px;
+    border-radius: 50%;
+}
+.dropdown-profile{
+    right: 0;
+    left: auto;
+}
+.items-card:hover{
+    box-shadow: 2px 2px 2px black;
+    transform: scale(1.02);
+}
+.transactions input[type=number]::-webkit-inner-spin-button, 
+.transactions input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}

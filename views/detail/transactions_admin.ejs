@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+<%- include('../partials/nav-min') %>
+<div class="d-flex align-center" style="background-image: url('/images/backgound.jpg'); height: fit-content; min-height: 100vh;">
+    <div class="container transactions" style="background-color: rgb(240, 250, 250, 0.95);">
+        <h1 class="text-center font_weight-bold">Transactions</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Photo</th>
+                <th scope="col">Item</th>
+                <th scope="col">User</th>
+                <th scope="col">Price</th>
+                <th scope="col">Time</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% for( let i = 0; i < items.length; i++ ) { %>
+                    <tr>
+                        <td><img src=<%= items[i].photo%> style="width: 120px; border: 1px solid grey; border-radius: 5px "></td>
+                        <td><%= items[i].item %> </td>
+                        <td><%= items[i].user %> </td>
+                        <td>Rp. <%= items[i].sub_total %></td>
+                        <td><%= items[i].update_at %> </td>
+                    </tr>  
+                <% } %>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center">
+            <a href="javascript:history.back()" class="btn btn-danger">OK</a>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer') %>   

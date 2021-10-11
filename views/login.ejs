@@ -1,0 +1,36 @@
+<%- include('partials/header')%>
+<div style="background-image: url('/images/backgound.jpg'); height: 100vh;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand font-weight-bold" href="#">Techno Shop</a>
+        <button class="btn bg-transparent p-4" ></button>
+    </nav>
+    <% if (message) {%>
+        <div class="alert alert-<%= message.type %> " role="alert">
+            <%= message.message %> 
+        </div>
+    <% } %>
+
+    <div class="container mt-5 bg-dark p-3 text-light rounded">
+        <div class="d-flex justify-content-center">
+            <h2 class="font-weight-bold">LOGIN</h2>
+        </div>
+        <form action="" method="post"> 
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <small class="form-text text-muted">
+                    <a class="m-2" href="/register"> register</a>
+                    <a class="m-2" href="/">home</a>
+                </small>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('partials/footer') %> 

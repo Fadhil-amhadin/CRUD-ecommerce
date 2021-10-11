@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+<%- include('../partials/nav-min') %>
+<div class="d-flex align-center" style="background-image: url('/images/backgound.jpg'); height: 100vh;">
+    <div class="container transactions" style="background-color: rgb(240, 250, 250, 0.95);">
+        <h1 class="text-center font-weight-bold">My Cart</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Photo</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Category</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% for( let i = 0; i < items.length; i++ ) { %>
+                    <tr>
+                        <td><img src=<%= items[i].photo%> style="width: 120px; border: 1px solid grey; border-radius: 5px "></td>
+                        <td><%= items[i].name %> </td>
+                        <td>Rp. <%= items[i].price %> </td>
+                        <td><%= items[i].brand %> </td>
+                        <td class="d-flex justify-content-between"><%= items[i].category %>
+                            <a href="transactions/<%= items[i].id %>" class="btn btn-danger">X</a>
+                        </td>
+                    </tr>  
+                <% } %>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center">
+            <a href="payments" class="btn btn-danger">Purchase</a>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer') %>   

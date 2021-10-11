@@ -1,0 +1,30 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/nav-min') %> 
+<div style="background-image: url('/images/backgound.jpg'); padding-top: 50px; height: 87vh;">
+    <div class="container">
+        <div class="row no-gutters detail-row" style="border: 2px solid black; border-radius: 6px;">
+            <div class="col-md-5">
+                <img class="card-img-top" src="/images/product/<%= photo %>  " alt="">
+            </div>
+            <div class="col-md-7 d-block text-center" style="border-left: 2px solid black; background-color: rgb(173, 216, 230, 0.9);">
+                <h1> <%= name %> </h1>
+                <div class="text-justify">
+                    <h6 class="px-4"><%= description %> </h6>
+                </div>
+                <div>
+                    <h4>Remaining Stock : <%= stock %> </h4>
+                </div>
+                <div>
+                    <h4 class="mt-5">Price: Rp. <%= price %> </h4>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="/transactions" class="btn btn-primary mx-1">Purchase</a>
+                    <form action="" method="post">
+                        <button type="submit" class="btn btn-danger mx-1">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer') %> 

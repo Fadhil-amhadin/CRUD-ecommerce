@@ -1,0 +1,68 @@
+<%- include('partials/header') %>
+<%- include('partials/nav-min') %> 
+<div class="pt-5 pb-3" style="background-color: silver;">
+    <div class="container bg-dark text-white" style="border-radius: 7px;">
+        <div class="d-flex justify-content-center mt-2 pt-3">
+            <h1>Enter Your Product</h1>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Product Name</label>
+                <input name="name" type="text" class="form-control" placeholder="enter product name">
+            </div>
+            <div>
+                <label>Product Description</label>
+                <textarea name="description" class="form-control" placeholder="enter your product description"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Product Price</label>
+                <input name="price" type="number" class="form-control" placeholder="enter your product price">
+            </div>
+            <div class="form-group">
+                <label>Product Stock</label>
+                <input name="stock" type="number" class="form-control" placeholder="enter your product stock">
+            </div>
+            <div class="d-flex">
+                <div class="mx-1" style="flex: 1;">
+                    <label>Brand</label>
+                    <select name="brand_id" class="form-control">
+                        <option value="1">lenovo</option>
+                        <option value="2">samsung</option>
+                        <option value="3">dell</option>
+                        <option value="4">asus</option>
+                        <option value="5">canon</option>
+                        <option value="6">sandisk</option>
+                        <option value="7">sonos</option>
+                        <option value="8">bose</option>
+                        <option value="9">amazon</option>
+                    </select>
+                </div>
+                <div class="mx-1" style="flex: 1;">
+                    <label>Category</label>
+                    <select name="category_id" class="form-control">
+                        <option value="1">laptop</option>
+                        <option value="2">phone</option>
+                        <option value="3">accessories</option>
+                        <option value="4">camera</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-3 ml-1">
+                <label>Product Image</label>
+            </div>
+            <div class="input-group mb-3" style="transform:scale(0.995);">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Upload</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="photo">
+                    <label class="custom-file-label" for="photo">Choose file</label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary mt-2 mb-3">Add Product</button>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('partials/footer') %>

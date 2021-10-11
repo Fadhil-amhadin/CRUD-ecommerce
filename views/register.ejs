@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand font-weight-bold" href="#">Techno Shop</a>
+    <button class="btn bg-transparent p-4" ></button>
+</nav>
+<% if (message) {%>
+    <div class="alert alert-<%= message.type %> " role="alert">
+        <%= message.message %> 
+    </div>
+<% } %>
+<div class="container mt-5 bg-dark p-3 text-light rounded">
+    <div class="d-flex justify-content-center">
+        <h2 class="font-weight-bold">REGISTRATION</h2>
+    </div>
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <div>
+                <textarea class="w-100 rounded" name="address" rows="3" placeholder="Enter address"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="password-confirm"> Confirm Password</label>
+            <input type="password" class="form-control" name="passwordConfirm" placeholder="Retype Password">
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <small class="form-text text-muted">
+                <a class="m-2" href="/login"> login</a>
+                <a class="m-2" href="/">home</a>
+            </small>
+        </div>
+    </form>
+</div>
+<%- include('partials/footer') %> 
